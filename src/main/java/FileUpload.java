@@ -57,7 +57,8 @@ public class FileUpload extends HttpServlet {
         }
         
         // プレビュー表示用JSPにファイル名を渡す
-        request.setAttribute("uploadedFileName", "/Kidda-La/" + UPLOAD_DIR + "/" + fileName);
+        request.setAttribute("uploadedFileName", "/FileUpload/" + UPLOAD_DIR + "/" + fileName);
         request.getRequestDispatcher("/preview.jsp").forward(request, response);
     }
 }
+
